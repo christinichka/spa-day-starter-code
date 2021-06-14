@@ -5,11 +5,24 @@
     <title>Title</title>
 </head>
 <body>
-    <form method = 'post'>
+    <form method = 'post' action="/user">
         <label>
             Username:
-            <input=text
+            <input type="text" name="username" th:attr="value=${username}" />
+        </label><br>
+        <label>
+            Email:
+            <input type="email" name="email" th:attr="value=${username}" />
+        </label><br>
+        <label>
+            Password:
+            <input type="password" name="password" />
+        </label><br>
+        <label>
+            Verify Password:
+            <input type="password" name="verify" />
         </label>
+        <input type="submit" value="Submit">
     </form>
 </body>
 </html>
